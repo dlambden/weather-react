@@ -1,0 +1,36 @@
+.forecast-card {
+  background: rgb(248, 249, 250);
+  margin: 0.2rem;
+  padding: 0.3rem;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex: 1;
+}
+
+.card-body {
+  padding: 0;
+  text-transform: capitalize;
+  word-wrap: normal;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  min-height: 137px;
+}
+
+.card-body img {
+  margin: 0.2rem auto;
+  height: auto;
+  width: 100%;
+  max-width: 100px;
+}
+
+.dualtemp {
+  color: rgb(0, 0, 150);
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  margin: 0.3rem;
+  white-space: nowrap;
+}

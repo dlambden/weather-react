@@ -1,0 +1,74 @@
+#Current {
+  background: rgb(248, 249, 250);
+  border-radius: 10px;
+  width: 80%;
+  margin: 0.5rem auto;
+  padding: 0.3rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+#display-location {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+  font-weight: 400;
+  color: rgb(0, 0, 150);
+}
+
+#display-cond {
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: block;
+}
+
+#display-temp {
+  font-size: 3rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  color: rgb(0, 0, 150);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.piccontainer {
+  margin: 0.5rem auto 0 auto;
+  width: 60%;
+}
+
+#mainpic {
+  height: auto;
+  width: 100%;
+  max-width: 250px;
+}
+
+#temptoggle {
+  background: white;
+  padding: 0.1rem 0.4rem;
+  font-weight: 600;
+  border: 1px solid rgb(216, 216, 216);
+  border-radius: 2px;
+  box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+#temptoggle:hover {
+  color: rgb(233, 152, 2);
+  cursor: pointer;
+  border: 1px solid rgb(211, 211, 211);
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgb(248, 249, 250);
+}
+
+#temptoggle:focus {
+  outline: none;
+  color: black;
+}
+
+#temptoggle:focus:hover {
+  color: rgb(233, 152, 2);
+}
+
+#details {
+  margin: 0.2rem auto;
+  line-height: 1.2;
+}
