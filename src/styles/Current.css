@@ -1,4 +1,4 @@
-#Current {
+.Current {
   background: rgb(248, 249, 250);
   border-radius: 10px;
   width: 80%;
@@ -29,17 +29,6 @@
   font-weight: 600;
   color: rgb(0, 0, 150);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.piccontainer {
-  margin: 0.5rem auto 0 auto;
-  width: 60%;
-}
-
-#mainpic {
-  height: auto;
-  width: 100%;
-  max-width: 250px;
 }
 
 #temptoggle {

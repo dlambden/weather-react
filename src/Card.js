@@ -1,17 +1,17 @@
 import React from "react";
-import "./Card.css";
+import "./styles/Card.css";
 import weathericon from "./img/ico/day_partial_cloud.svg";
 
-export default function Card(prop) {
+export default function Card(props) {
   return (
     <div className="forecast-card">
       <div className="card-body">
         <span id="date1">Date</span>
         <img id="img1" src={weathericon} />
-        <span id="temp1" class="dualtemp">
-          7 | 4
+        <span id="temp1" className="dualtemp">
+        ↑ | ↓
         </span>
-        <span id="desc1">Parly Cloudy</span>
+        <span id="desc1">conditions</span>
       </div>
     </div>
   );

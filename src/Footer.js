@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Footer(prop) {
+export default function Footer(props) {
   return (
     <div id="footer">
       <a href="https://github.com/dlambden" target="_blank">

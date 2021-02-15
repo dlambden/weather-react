@@ -1,9 +1,9 @@
 import React from "react";
-import "./Forecast.css";
+import "./styles/Forecast.css";
 import Card from "./Card";
 import weathericon from "./img/ico/day_partial_cloud.svg";
 
-export default function Forecast(prop) {
+export default function Forecast(props) {
   return (
     <div className="col forecast">
       <p>5 DAY FORECAST</p>
