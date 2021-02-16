@@ -67,7 +67,7 @@ export default function Header(props) {
 
   return (
     <div id="Header">
-      <button id="geolocate" onClick={geoHandler} className="btn">
+      <button id="geolocate" onClick={geoHandler} >
         <i className="fas fa-map-marker-alt"></i>
       </button>
       <form id="search-field" onSubmit={handleSubmit}>

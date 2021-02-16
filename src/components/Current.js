@@ -6,7 +6,7 @@ import Units from "./Units";
 
 import "../styles/Current.css";
 
-export default function Current({weatherObj}, {isMetric}) {
+export default function Current({weatherObj}, unit) {
 const [offset, setOffset] = useState("");
 const [icon, setIcon] = useState("");
 
@@ -23,7 +23,7 @@ function convertMph(kmh) {
     <h1 id="display-location">{weatherObj.name}</h1>
     <Time offset={weatherObj.timezone}/>
     <Icon icon={weatherObj.weather[0].main} sunrise={weatherObj.sys.sunrise} sunset={weatherObj.sys.sunset}/>
-    <span id="display-temp">{isMetric ? (weatherObj.main.temp) : (convertFar(weatherObj.main.temp))}°</span>
+    <span id="display-temp">{unit ? (weatherObj.main.temp) : (convertFar(weatherObj.main.temp))}°</span>
     <Units />
     <span id="display-cond">{weatherObj.weather[0].description}</span>
     <p id="details">
@@ -31,7 +31,7 @@ function convertMph(kmh) {
       <br />
       <span id="display-humid">Humidity: {weatherObj.main.humidity}%</span>
       <br />
-      <span id="display-wind">Wind: {isMetric ? (weatherObj.wind.speed) : (weatherObj.wind.speed)}</span>
+      <span id="display-wind">Wind: {unit ? (Math.round(weatherObj.wind.speed)) : (convertMph(weatherObj.wind.speed))}</span>
       <span id="windunit"></span>
     </p>
   </div>

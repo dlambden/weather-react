@@ -1,19 +1,17 @@
 import React from "react";
 import "../styles/Card.css";
-import weathericon from "../img/ico/day_partial_cloud.svg";
+import Icon from "./Icon";
 
 export default function Card(props) {
-
   console.log(props.day);
   let dateString = new Date(props.day.dt*1000);
-  let cardDate = (dateString.toLocaleDateString()).slice(0,-5);
-  console.log(cardDate);
-
+  let cardDate = (dateString.toLocaleDateString()).slice(0,-5);  
+  
   return (
     <div className="forecast-card">
       <div className="card-body">
         <span id="date1">{cardDate}</span>
-        <img id="img1" src={weathericon} />
+        <Icon icon={props.day.weather[0].main} sunrise={1} sunset={2000000000}/>
         <span id="temp1" className="dualtemp">
         {Math.round(props.day.temp.max)}° | {Math.round(props.day.temp.min)}°
         </span>
@@ -22,9 +20,3 @@ export default function Card(props) {
     </div>
   );
 }
-
-
-// let cardDate = data.dt
-//   dateString = new Date(cardDate*1000);
- // (not used?) console.log((dateString.toLocaleDateString()).slice(0,-5));
- //  dateElem.innerText = (dateString.toLocaleDateString()).slice(0,-5);

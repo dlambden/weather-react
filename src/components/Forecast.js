@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "../styles/Forecast.css";
 import Card from "./Card";
 
-export default function Forecast({forecastArr}, {isMetric}) {
-  
+export default function Forecast({forecastArr}, unit) {
+
 
   let forecastElements = [];
 
