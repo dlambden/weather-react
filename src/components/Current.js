@@ -6,7 +6,7 @@ import Units from "./Units";
 
 import "../styles/Current.css";
 
-export default function Current({data}, {isMetric}) {
+export default function Current({weatherObj}, {isMetric}) {
 const [offset, setOffset] = useState("");
 const [icon, setIcon] = useState("");
 
@@ -18,21 +18,20 @@ function convertMph(kmh) {
   return (Math.round(kmh * 1.6));
 }
 
-  console.log(data);
-  return data ? (
+  return weatherObj ? (
     <div className="Current">
-    <h1 id="display-location">{data.name}</h1>
-    <Time offset={data.timezone}/>
-    <Icon icon={data.weather[0].main} sunrise={data.sys.sunrise} sunset={data.sys.sunset}/>
-    <span id="display-temp">{isMetric ? (data.main.temp) : (convertFar(data.main.temp))}°</span>
+    <h1 id="display-location">{weatherObj.name}</h1>
+    <Time offset={weatherObj.timezone}/>
+    <Icon icon={weatherObj.weather[0].main} sunrise={weatherObj.sys.sunrise} sunset={weatherObj.sys.sunset}/>
+    <span id="display-temp">{isMetric ? (weatherObj.main.temp) : (convertFar(weatherObj.main.temp))}°</span>
     <Units />
-    <span id="display-cond">{data.weather[0].description}</span>
+    <span id="display-cond">{weatherObj.weather[0].description}</span>
     <p id="details">
-      <span id="display-precip">Precipitation: {data.precipitation}</span>
+      <span id="display-precip">Precipitation: {weatherObj.precipitation}</span>
       <br />
-      <span id="display-humid">Humidity: {data.main.humidity}%</span>
+      <span id="display-humid">Humidity: {weatherObj.main.humidity}%</span>
       <br />
-      <span id="display-wind">Wind: {isMetric ? (data.wind.speed) : (data.wind.speed)}</span>
+      <span id="display-wind">Wind: {isMetric ? (weatherObj.wind.speed) : (weatherObj.wind.speed)}</span>
       <span id="windunit"></span>
     </p>
   </div>

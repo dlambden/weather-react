@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import "../styles/Forecast.css";
 import Card from "./Card";
 
-export default function Forecast({data}, {isMetric}) {
-
-  console.log(data);
+export default function Forecast({forecastArr}, {isMetric}) {
+  
 
   let forecastElements = [];
 
-  for (let day of data) {
+  for (let day of forecastArr.slice(0,5)) {
     forecastElements = [
       ...forecastElements,
-      <Card count={day.count} />
+      <Card day={day} />
     ];
   }
 

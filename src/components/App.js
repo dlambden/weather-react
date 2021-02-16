@@ -14,8 +14,8 @@ export default function App() {
     <div id="App">
       <div id="appcontainer">
         <Header updateWeather={updateWeather} updateForecast={updateForecast}/>
-        <Current data={weatherObj} isMetric={isMetric}/>
-        <Forecast data={forecastArr} isMetric={isMetric}/>
+        <Current weatherObj={weatherObj} isMetric={isMetric}/>
+        <Forecast forecastArr={forecastArr} isMetric={isMetric}/>
       </div>
       <Footer />
     </div>
