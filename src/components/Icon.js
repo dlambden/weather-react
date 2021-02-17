@@ -42,7 +42,7 @@ export default function Icon(props) {
 
   return (
     <div className="piccontainer">
-     <img id="mainpic" src={calcIcon(props.icon)} />
+     <img id="icon" src={calcIcon(props.icon)} />
     </div>
   )
 };

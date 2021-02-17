@@ -3,37 +3,42 @@ import axios from "axios";
 import Time from "./Time";
 import Icon from "./Icon";
 import Units from "./Units";
+import { PopoverPicker } from "./PopoverPicker";
 
 import "../styles/Current.css";
 
-export default function Current({weatherObj}, unit) {
-const [offset, setOffset] = useState("");
-const [icon, setIcon] = useState("");
+export default function Current(props) {
+  const [offset, setOffset] = useState("");
+  const [icon, setIcon] = useState("");
+  const [color, setColor] = useState("#accbee");
 
-function convertFar(tempC) {
-  return (Math.round(tempC * 1.8)+32);
-}
 
-function convertMph(kmh) {
-  return (Math.round(kmh * 1.6));
-}
+  function convertFar(tempC) {
+    return (Math.round(tempC * 1.8)+32);
+  }
 
-  return weatherObj ? (
+  function convertMph(kmh) {
+    return (Math.round(kmh * 1.6));
+  }
+
+
+  return props.weatherObj ? (
     <div className="Current">
-    <h1 id="display-location">{weatherObj.name}</h1>
-    <Time offset={weatherObj.timezone}/>
-    <Icon icon={weatherObj.weather[0].main} sunrise={weatherObj.sys.sunrise} sunset={weatherObj.sys.sunset}/>
-    <span id="display-temp">{unit ? (weatherObj.main.temp) : (convertFar(weatherObj.main.temp))}°</span>
+    <h1 id="display-location">{props.weatherObj.name}</h1>
+    <Time offset={props.weatherObj.timezone}/>
+    <Icon icon={props.weatherObj.weather[0].main} sunrise={props.weatherObj.sys.sunrise} sunset={props.weatherObj.sys.sunset}/>
+    <span id="display-temp">{props.unit ? (Math.round(props.weatherObj.main.temp)) : (convertFar(props.weatherObj.main.temp))}°</span>
     <Units />
-    <span id="display-cond">{weatherObj.weather[0].description}</span>
+    <span id="display-cond">{props.weatherObj.weather[0].description}</span>
     <p id="details">
-      <span id="display-precip">Precipitation: {weatherObj.precipitation}</span>
+      <span id="display-precip">Precipitation: {props.weatherObj.precipitation}</span>
       <br />
-      <span id="display-humid">Humidity: {weatherObj.main.humidity}%</span>
+      <span id="display-humid">Humidity: {props.weatherObj.main.humidity}%</span>
       <br />
-      <span id="display-wind">Wind: {unit ? (Math.round(weatherObj.wind.speed)) : (convertMph(weatherObj.wind.speed))}</span>
+      <span id="display-wind">Wind: {props.unit ? (Math.round(props.weatherObj.wind.speed)+"km/h") : (convertMph(props.weatherObj.wind.speed)+"mph")}</span>
       <span id="windunit"></span>
     </p>
+    <PopoverPicker color={color} onChange={e => {setColor(e); props.setAppcolor(e)}}/>
   </div>
     
   ) : (

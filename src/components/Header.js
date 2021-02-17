@@ -10,7 +10,7 @@ export default function Header(props) {
   function updateData(response) {
     let lat = response.data.coord.lat;
     let lon = response.data.coord.lon;
-    let hourlyPrecip = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,daily,alerts&appid=${apiKey}`;
+    let hourlyPrecip = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,daily,alerts&appid=${apiKey}&units=metric`;
     let forecastURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&appid=${apiKey}&units=metric`;
     
     axios.get(hourlyPrecip).then(function(res) {

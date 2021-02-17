@@ -4,7 +4,6 @@ import Card from "./Card";
 
 export default function Forecast({forecastArr}, unit) {
 
-
   let forecastElements = [];
 
   for (let day of forecastArr.slice(0,5)) {
@@ -22,5 +21,4 @@ export default function Forecast({forecastArr}, unit) {
       </div>
     </div>
   );
-
 }

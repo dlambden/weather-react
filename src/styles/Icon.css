@@ -1,9 +1,9 @@
 .piccontainer {
-  margin: 0.5rem auto 0 auto;
-  width: 60%;
+  margin: 0 auto;
+  width: 85%;
 }
 
-#mainpic {
+#icon {
   height: auto;
   width: 100%;
   max-width: 250px;

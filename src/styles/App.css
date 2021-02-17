@@ -2,6 +2,7 @@
   margin: 0 auto;
   font-size: 16px;
   text-align: center;
+  max-width: 600px;
 }
 
 a:link {
@@ -14,9 +15,7 @@ p {
 
 #appcontainer {
   min-width: fit-content;
-  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
   margin: 0 auto;
   padding: 0.5rem;
   border-radius: 10px;
-  max-width: 400px;
 }
