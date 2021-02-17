@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../styles/Header.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 
 export default function Header(props) {
   const [location, setLoc] = useState("");
@@ -68,7 +71,7 @@ export default function Header(props) {
   return (
     <div id="Header">
       <button id="geolocate" onClick={geoHandler} >
-        <i className="fas fa-map-marker-alt"></i>
+        <FontAwesomeIcon icon={faMapMarkerAlt} />
       </button>
       <form id="search-field" onSubmit={handleSubmit}>
         <input
@@ -80,7 +83,7 @@ export default function Header(props) {
           autoFocus
         />
         <button type="submit" value="Submit" className="btn">
-          <i className="fas fa-search"></i>
+          <FontAwesomeIcon icon={faSearch} />
         </button>
       </form>
     </div>

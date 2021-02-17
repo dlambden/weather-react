@@ -4,6 +4,9 @@ import "../styles/PopoverPicker.css";
 
 import useClickOutside from "./useClickOutside";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPalette } from '@fortawesome/free-solid-svg-icons'
+
 export const PopoverPicker = ({ color, onChange }) => {
   const popover = useRef();
   const [isOpen, toggle] = useState(false);
@@ -13,9 +16,9 @@ export const PopoverPicker = ({ color, onChange }) => {
 
   return (
     <div className="picker">
-      <div
+      <FontAwesomeIcon icon={faPalette}
         className="swatch"
-        style={{ backgroundColor: color }}
+        style={{ color: color }}
         onClick={() => toggle(true)}
       />
 
