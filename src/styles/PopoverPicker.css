@@ -11,6 +11,7 @@
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   padding: 0.2rem 0.4rem;
+  background: rgb(248, 249, 250);
 }
 
 .popover {
@@ -19,4 +20,10 @@
   left: 0;
   border-radius: 5px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.swatch:hover {
+  border: 1px solid rgb(211, 211, 211);
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.2);
+  background: white;
 }

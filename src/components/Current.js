@@ -31,12 +31,11 @@ export default function Current(props) {
     <Units unit={unit} setUnit={setUnit} onChange={props.setIsMetric(unit)}/>
     <span id="display-cond">{props.weatherObj.weather[0].description}</span>
     <p id="details">
-      <span id="display-precip">Precipitation: {props.weatherObj.precipitation}</span>
+      Precipitation: {props.weatherObj.precipitation}
       <br />
-      <span id="display-humid">Humidity: {props.weatherObj.main.humidity}%</span>
+      Humidity: {props.weatherObj.main.humidity}%
       <br />
-      <span id="display-wind">Wind: {props.isMetric ? (Math.round(props.weatherObj.wind.speed)+"km/h") : (convertMph(props.weatherObj.wind.speed)+"mph")}</span>
-      <span id="windunit"></span>
+      Wind: {props.isMetric ? (Math.round(props.weatherObj.wind.speed)+"km/h") : (convertMph(props.weatherObj.wind.speed)+"mph")}
     </p>
     <PopoverPicker color={color} onChange={e => {setColor(e); props.setAppcolor(e)}}/>
   </div>

@@ -2,21 +2,22 @@ import React, { useState } from "react";
 import "../styles/Forecast.css";
 import Card from "./Card";
 
-export default function Forecast({forecastArr}, {isMetric}) {
+export default function Forecast(props) {
+  const [unit, setUnit] = useState(props.isMetric);
 
   let forecastElements = [];
 
-  for (let day of forecastArr.slice(0,5)) {
+  for (let day of props.forecastArr.slice(0,5)) {
     forecastElements = [
       ...forecastElements,
-      <Card day={day} isMetric={isMetric}/>
+      <Card day={day} unit={props.isMetric}/>
     ];
   }
 
   return (
-    <div className="col forecast">
+    <div id="forecast">
       <p>5 DAY FORECAST</p>
-      <div className="forecast-container">
+      <div id="forecast-container">
         {forecastElements}
       </div>
     </div>
