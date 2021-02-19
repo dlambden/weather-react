@@ -11,14 +11,14 @@ export default function App() {
   let [isMetric, setIsMetric] = useState(true);
   let [appcolor, setAppcolor] = useState("#accbee");
 
-  console.log(appcolor);
+  console.log(appcolor+" (appcolor in App)");
 
   let gradient = "linear-gradient(to top, #accbee 0%, #e7f0fd 100%)";
 
   return (
     <div id="App">
       <div id="appcontainer" style={{ backgroundColor: appcolor }}>
-        <Header updateWeather={updateWeather} updateForecast={updateForecast}/>
+        <Header updateWeather={updateWeather} updateForecast={updateForecast} weatherObj={weatherObj}/>
         <Current weatherObj={weatherObj} setIsMetric={setIsMetric} isMetric={isMetric} setAppcolor={setAppcolor}/>
         <Forecast forecastArr={forecastArr} isMetric={isMetric}/>
       </div>

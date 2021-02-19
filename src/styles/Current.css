@@ -1,37 +1,58 @@
 .Current {
+  position: relative;
   background: rgb(248, 249, 250);
-  border-radius: 10px;
-  width: 80%;
-  margin: 0.5rem auto;
-  padding: 0.3rem;
+  border-radius: 0.25rem;
+  margin: 0.4rem 0.2rem;
+  padding: 0.2rem 0.4rem;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  font-family: "Bai Jamjuree", sans-serif;
+  height: fit-content;
 }
 
-#display-location {
+h1 {
   margin: 0;
   padding: 0;
-  font-size: 3rem;
+  font-size: 1.8rem;
   font-weight: 400;
-  color: rgb(0, 0, 150);
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 20%);
 }
 
-#display-temp {
-  font-size: 2.8rem;
+#main {
+  
+  display: flex;
+  width: fit-content;
+  text-align: center;
+  margin: 0.2rem auto 2rem auto;
+}
+
+#weather {
+  position: relative;
+  text-align: left;
+  width: 100px;
+}
+
+#maintemp {
+  position: absolute;
+  top: -1.6rem;
+  left: -1rem;
+  font-size: 2.5rem;
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
-  color: rgb(0, 0, 150);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 20%);
 }
 
-#display-cond {
+#conditions {
+  margin: 0.5rem auto 0 1rem;
   text-transform: capitalize;
-  font-size: 1.5rem;
-  font-weight: 600;
-  display: block;
+  font-size: 1.3rem;
+  font-weight: 400;
+  word-spacing: 100vw;
 }
 
 #details {
-  margin: 0.2rem auto;
-  line-height: 1.2;
+  position: absolute;
+  bottom: 0.3rem;
+  right: 0.3rem;
+  text-align: left;
+  color: rgb(121, 121, 121);
+  font-size: 0.9rem;
 }

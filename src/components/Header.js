@@ -3,12 +3,12 @@ import axios from "axios";
 import "../styles/Header.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 
 export default function Header(props) {
-  const [location, setLoc] = useState("");
+  const [location, setLoc] = useState("Vancouver");
 
-  const apiKey = `3bfeb5b01631989c9755b5bc4d802195`;
+  const apiKey = `86647240c453f3a54487d7b1be9884ad`;
 
   function updateData(response) {
     let lat = response.data.coord.lat;
@@ -19,6 +19,7 @@ export default function Header(props) {
     axios.get(hourlyPrecip).then(function(res) {
       response.data.precipitation = Math.round((Number(res.data.hourly[0].pop)) * 100) + '%';
       props.updateWeather(response.data);
+      setLoc("");
     });
 
     axios.get(forecastURL).then(function (resp) {
@@ -30,7 +31,7 @@ export default function Header(props) {
     let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`;
     axios
     .get(apiURL)
-    .then(updateData, setLoc(""))
+    .then(updateData)
     .catch(function (error) {
       alert("The city you entered cannot be found. Please try again.");
       setLoc("");
@@ -67,11 +68,21 @@ export default function Header(props) {
         alert("Geolocate failed.");
       });
   }
+ 
+  // searchCity("Vancouver");
+
+  console.log(props.weatherObj.name);
+    
+  if (props.weatherObj.name === undefined) {
+    searchCity(location);
+  }
+
+
 
   return (
     <div id="Header">
       <button id="geolocate" onClick={geoHandler} >
-        <FontAwesomeIcon icon={faMapMarkerAlt} />
+        <FontAwesomeIcon icon={faGlobe} />
       </button>
       <form id="search-field" onSubmit={handleSubmit}>
         <input
@@ -87,5 +98,6 @@ export default function Header(props) {
         </button>
       </form>
     </div>
-  );
+  
+  )
 }

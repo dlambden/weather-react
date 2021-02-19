@@ -16,7 +16,7 @@ export default function Forecast(props) {
 
   return (
     <div id="forecast">
-      <p>5 DAY FORECAST</p>
+      5 DAY FORECAST
       <div id="forecast-container">
         {forecastElements}
       </div>

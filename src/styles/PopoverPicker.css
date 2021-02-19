@@ -1,6 +1,7 @@
 .picker {
-  position: relative;
+  position: absolute;
   text-align: left;
+  bottom: 0.3rem;
 }
 
 .swatch {

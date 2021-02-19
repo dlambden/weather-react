@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Quicksand&display=swap");
 
 #Header {
-  margin: 0.4rem auto;
+  margin: 0 auto;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -24,6 +24,7 @@
 #search-field {
   display: flex;
   flex-wrap: nowrap;
+  margin: 0.2rem;
 }
 
 #geolocate {

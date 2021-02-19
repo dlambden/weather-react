@@ -1,7 +1,6 @@
 #forecast {
-  font-family: "Bai Jamjuree", sans-serif;
-  text-align: left;
   padding: 0;
+  font-size: 0.8rem;
 }
 
 #forecast-container {

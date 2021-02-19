@@ -19,8 +19,7 @@ export default function Card (props) {
         <div id="temps">
         <span className="temphigh">
           {props.unit ? (Math.round(props.day.temp.max)) : (convertFar(props.day.temp.max))}°
-        </span>
-        {" "}|{" "} 
+        </span> 
         <span className="templow">
           {props.unit ? (Math.round(props.day.temp.min)) : (convertFar(props.day.temp.min))}°
         </span>

@@ -1,11 +1,10 @@
-.piccontainer {
+.iconcontainer {
   margin: 0 auto;
   width: 90%;
+  display: inline;
 }
 
 #icon {
-  height: auto;
   width: 100%;
-  max-width: 250px;
-  min-width: 56px;
+  max-width: 150px;
 }
