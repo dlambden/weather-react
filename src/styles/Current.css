@@ -1,11 +1,29 @@
 .Current {
+  display: flex;
+  min-height: fit-content;
   position: relative;
+  margin: 0.4rem 0;
+  padding: 0.2rem 0.4rem;
   background: rgb(248, 249, 250);
   border-radius: 0.25rem;
-  margin: 0.4rem 0.2rem;
-  padding: 0.2rem 0.4rem;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-  height: fit-content;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  
+}
+
+#loader {
+  display: flex;
+  min-height: fit-content;
+  vertical-align: middle;
+  justify-content: center;
+  margin: 4rem auto;
+}
+
+#left-col {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0 auto 0 0;
+  padding: 0 0 0.5rem 0;
 }
 
 h1 {
@@ -16,43 +34,34 @@ h1 {
   text-shadow: 1px 1px 1px rgb(0 0 0 / 20%);
 }
 
-#main {
-  
+#right-col {
   display: flex;
-  width: fit-content;
-  text-align: center;
-  margin: 0.2rem auto 2rem auto;
+  flex-direction: column;
+  flex-wrap: nowrap;
 }
 
-#weather {
-  position: relative;
-  text-align: left;
-  width: 100px;
+#tempcontainer {
+  margin: 0 auto;
 }
 
-#maintemp {
-  position: absolute;
-  top: -1.6rem;
-  left: -1rem;
+#temp {
+  display: inline;
   font-size: 2.5rem;
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
   text-shadow: 1px 1px 1px rgb(0 0 0 / 20%);
 }
 
-#conditions {
-  margin: 0.5rem auto 0 1rem;
+#descrip {
+  margin: 1.5rem auto;
   text-transform: capitalize;
   font-size: 1.3rem;
   font-weight: 400;
-  word-spacing: 100vw;
+  text-align: right;
 }
 
 #details {
-  position: absolute;
-  bottom: 0.3rem;
-  right: 0.3rem;
-  text-align: left;
+  text-align: right;
   color: rgb(121, 121, 121);
   font-size: 0.9rem;
 }

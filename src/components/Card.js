@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Card.css";
 import Icon from "./Icon";
+import { Roller } from 'react-spinners-css';
 
 export default function Card (props) {
 
@@ -9,11 +10,13 @@ export default function Card (props) {
 
   function convertFar(tempC) {
     return (Math.round(tempC * 1.8)+32);
-  }
+  };
 
-  return (
+  console.log(props.isReady);
+  if (Object.values(props.day).length !== 0) {
+    return (
     <div className="forecast-card">
-      <div className="card-body">
+    <div className="card-body">
         {cardDate}
         <Icon icon={props.day.weather[0].main} sunrise={1} sunset={2000000000}/>
         <div id="temps">
@@ -27,7 +30,14 @@ export default function Card (props) {
         <span className="details">
           {props.day.weather[0].description}
         </span>
+        </div>
+        </div>
+    );
+    } else {
+      return (
+      <div id="card-loader">
+        <Roller color="black"/>
       </div>
-    </div>
-  );
-}
+      );
+    }
+    }
