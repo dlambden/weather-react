@@ -13,10 +13,10 @@ export default function Card (props) {
   };
 
   console.log(props.isReady);
-  if (Object.values(props.day).length !== 0) {
+
     return (
     <div className="forecast-card">
-    <div className="card-body">
+    
         {cardDate}
         <Icon icon={props.day.weather[0].main} sunrise={1} sunset={2000000000}/>
         <div id="temps">
@@ -30,14 +30,7 @@ export default function Card (props) {
         <span className="details">
           {props.day.weather[0].description}
         </span>
-        </div>
+        
         </div>
     );
-    } else {
-      return (
-      <div id="card-loader">
-        <Roller color="black"/>
-      </div>
-      );
-    }
     }

@@ -29,9 +29,14 @@ export default function Current(props) {
     <div className="Current">
       
       <div id="left-col">
+        <div id="location">
           <h1>{props.weatherObj.name}</h1>
           <Time offset={props.weatherObj.timezone}/>
+        </div>
+        
+        <div id="weathericon">
           <Icon icon={props.weatherObj.weather[0].main} sunrise={props.weatherObj.sys.sunrise} sunset={props.weatherObj.sys.sunset}/>
+        </div>
       </div>
 
       

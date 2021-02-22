@@ -6,19 +6,16 @@
   border-radius: 0.25rem;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   display: flex;
-}
-
-.card-body {
-  padding: 0;
+  flex: 1;
+  flex-direction: column;
   text-transform: capitalize;
-  word-wrap: normal;
   line-height: 1;
-  display: flex;
-  flex-direction: column;  
+  overflow-wrap:normal;
 }
 
 #temps {
-  margin: 0.2rem 0.6rem 0.5rem 0;
+  margin: 0 0 auto auto;
+  padding: 0.1rem 0.2rem 0.3rem 0;
   font-size: 1rem;
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
@@ -37,6 +34,6 @@
 }
 
 .details {
-  margin-top: auto;
+  margin: 0 auto 0 0;
 }
 

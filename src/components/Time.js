@@ -12,7 +12,7 @@ export default function Time({offset}) {
   let shavedTime = timeSplit[1].slice(0,-3);
 
   return (
-    <div>
+    <div id="timecontainer">
     {timeSplit[0]} {shavedTime} {timeSplit[2]}
     </div>
   )
